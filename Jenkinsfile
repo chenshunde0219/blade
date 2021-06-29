@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('pull code') {
       steps {
-        git(url: 'git@github.com:chenshunde0219/blade.git', branch: '"${BRANCH}"', changelog: true, credentialsId: 'GIT_USER')
+        git(url: 'https://github.com/chenshunde0219/blade.git', branch: '"${BRANCH}"', changelog: true, credentialsId: 'GIT_USER')
       }
     }
 
