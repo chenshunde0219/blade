@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('pull code') {
+    stage('Poll code') {
       steps {
-        sh 'echo "step 1"'
+        git(url: 'https://github.com/chenshunde0219/blade.git', branch: '"${BRANCH}"', changelog: true)
       }
     }
 
